@@ -4,12 +4,12 @@
 
 <ul>
 {% for item in itens %}
-	<li>
+    <li>
         <small>{{ item.data|date:'d/m/Y' }} às {{ item.hora|time:'h:i' }}</small> - 
         <a href="/exibir/{{ item.id }}">{{ item.titulo }}</a>
     </li>
 {% empty %}
-	<li>Sem itens</li>
+    <li>Sem itens</li>
 {% endfor %}
 </ul>
 
