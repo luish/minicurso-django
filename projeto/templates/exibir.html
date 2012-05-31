@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<h2>{{ item.titulo }}</h2>
+<p>{{ item.descricao }}</p>
+
+<ul>
+    <li><strong>Data: </strong>{{ item.data|date:'d/m/Y' }} - {{ item.hora|time:'h:i' }}</li>
+    <li><strong>Local: </strong>{{ item.local }}</li>
+</ul>
+
+<p>
+    <a href="/" class="btn">Voltar</a>
+    <a href="/remover/{{ item.id }}" class="btn btn-danger">Remover</a>
+</p>
+
+{% endblock %}
